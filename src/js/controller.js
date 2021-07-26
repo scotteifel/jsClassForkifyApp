@@ -8,7 +8,6 @@ import addRecipeView from './views/addRecipeView.js';
 import { MODAL_CLOSE_SEC } from './config.js';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-
 // if(module.hot) {
 //   module.hot.accept();
 // };
@@ -116,6 +115,9 @@ const controlAddRecipe = async function (newRecipe) {
         addRecipeView.renderError(err.message);
     }
 };
+const newFunc = function () {
+    console.log('welcome');
+};
 
 const init = function () {
     // Onload handlers
@@ -127,6 +129,7 @@ const init = function () {
     searchView.addHandlerSearch(controlSearchResults);
     paginationView.addHandlerClick(controlPagination);
     addRecipeView.addHandlerUpload(controlAddRecipe);
+    newFunc();
 };
 
 init();
