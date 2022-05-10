@@ -8,9 +8,6 @@ import addRecipeView from './views/addRecipeView.js';
 import { MODAL_CLOSE_SEC } from './config.js';
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-// if(module.hot) {
-//   module.hot.accept();
-// };
 
 // First function run by controller onload
 const controlBookmarks = function () {
@@ -126,6 +123,7 @@ const init = function () {
     searchView.addHandlerSearch(controlSearchResults);
     paginationView.addHandlerClick(controlPagination);
     addRecipeView.addHandlerUpload(controlAddRecipe);
+    console.log('Running init function');
 };
 
-init()
+init();
